@@ -14,6 +14,7 @@ Main features
 - Quizzes: Quick tests to evaluate phishing recognition skills.
 
 Tech Stack
+
 Frontend: HTML, CSS, JS.
 Deployment: Github Pages
 
