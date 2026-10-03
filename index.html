@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phishing Detector Academy</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">Phishing Detector Academy</div>
+      <nav>
+        <ul>
+          <li>
+            <button
+              id="nav-home"
+              class="nav-btn active"
+              onclick="switchView('home')"
+            >
+              Home
+            </button>
+          </li>
+          <li>
+            <button
+              id="nav-learn"
+              class="nav-btn"
+              onclick="switchView('learn')"
+            >
+              Learn
+            </button>
+          </li>
+          <li>
+            <button
+              id="nav-scenarios"
+              class="nav-btn"
+              onclick="switchView('scenarios')"
+            >
+              Scenarios
+            </button>
+          </li>
+          <li>
+            <button id="nav-quiz" class="nav-btn" onclick="switchView('quiz')">
+              Quiz
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="view-home" class="view-section active">
+        <div class="home-hero">
+          <h1>Learn to Detect Phishing Before It Tricks You</h1>
+          <p>
+            Learn how phishing attacks work, recognize common warning signs, and
+            practice analyzing suspicious messages.
+          </p>
+          <div class="button-group">
+            <button class="btn" onclick="switchView('learn')">
+              Start Learning
+            </button>
+            <button class="btn btn-secondary" onclick="switchView('scenarios')">
+              Try a Scenario
+            </button>
+          </div>
+        </div>
+
+        <div class="section-heading">
+          <span class="section-label">WHY IT MATTERS</span>
+          <h2>One careless click can cost more than you expect.</h2>
+          <p>
+            Phishing is not only a problem for companies. Students are also
+            targeted because they use email, social media, online banking,
+            university accounts, and digital payment services every day.
+          </p>
+        </div>
+
+        <div class="learn-grid">
+          <article class="learn-item">
+            <div class="item-header">
+              <span class="item-number">01</span>
+            </div>
+            <h3>Your Accounts Are Valuable</h3>
+            <p>
+              Your university, email, social media, and gaming accounts can
+              contain personal information or be used to access other services.
+            </p>
+          </article>
+
+          <article class="learn-item">
+            <div class="item-header">
+              <span class="item-number">02</span>
+            </div>
+            <h3>Phishing Looks Legit</h3>
+            <p>
+              Attackers can copy familiar logos, writing styles, and login pages
+              to make a message look like it came from someone you trust.
+            </p>
+          </article>
+
+          <article class="learn-item">
+            <div class="item-header">
+              <span class="item-number">03</span>
+            </div>
+            <h3>Attackers Exploit Your Attention</h3>
+            <p>
+              Urgency, fear, curiosity, and rewards are commonly used to make
+              people act before they stop and check.
+            </p>
+          </article>
+
+          <article class="learn-item">
+            <div class="item-header">
+              <span class="item-number">04</span>
+            </div>
+            <h3>Knowing the Signs Helps</h3>
+            <p>
+              Learning a few simple checks can help you spot suspicious messages
+              before clicking a link or sharing sensitive information.
+            </p>
+          </article>
+        </div>
+
+        <div class="continue-learning">
+          <div class="continue-text">
+            <span class="section-label">READY?</span>
+            <h2>Think you can spot a phishing message?</h2>
+            <p>
+              Start with the basics, then test yourself with realistic
+              scenarios.
+            </p>
+          </div>
+
+          <button class="btn btn-cta" onclick="switchView('learn')">
+            Continue Learning →
+          </button>
+        </div>
+      </section>
+
+      <section id="view-learn" class="view-section">
+        <h1>Phishing Knowledge Base</h1>
+
+        <div class="learn-block">
+          <h2>1. Understanding Phishing</h2>
+          <p>
+            Phishing is a type of social engineering attack where malicious
+            actors impersonate legitimate organizations or contacts to deceive
+            individuals into revealing sensitive information.
+          </p>
+          <p>
+            <strong>Why attackers use it:</strong> It relies on human psychology
+            rather than breaking complex software security. Deceiving a user
+            into handing over credentials is often easier than hacking a system
+            directly.
+          </p>
+          <p><strong>Common phishing methods:</strong></p>
+          <ul class="learn-list">
+            <li>
+              <strong>Email Phishing:</strong> Fraudulent mass emails demanding
+              immediate action.
+            </li>
+            <li>
+              <strong>Spear Phishing:</strong> Targeted messages tailored to a
+              specific person or workplace.
+            </li>
+            <li>
+              <strong>Smishing & Vishing:</strong> Phishing attempted via SMS
+              texts or telephone voice calls.
+            </li>
+          </ul>
+        </div>
+
+        <div class="learn-block">
+          <h2>2. Warning Signs</h2>
+          <p>
+            Always inspect incoming communications for these frequent red flags:
+          </p>
+          <ul class="learn-list">
+            <li>
+              <strong>Urgency:</strong> Demands for immediate action (e.g.,
+              "Account suspended in 30 minutes").
+            </li>
+            <li>
+              <strong>Suspicious Links:</strong> Hovering over links reveals
+              mismatched web addresses.
+            </li>
+            <li>
+              <strong>Unexpected Attachments:</strong> Unsolicited PDFs, ZIPs,
+              or executable files.
+            </li>
+            <li>
+              <strong>Requests for Sensitive Information:</strong> Asking for
+              passwords, PINs, or card numbers.
+            </li>
+            <li>
+              <strong>Unknown Senders:</strong> Unfamiliar email addresses or
+              slight variations of official domain names.
+            </li>
+          </ul>
+        </div>
+
+        <div class="learn-block">
+          <h2>3. Suspicious URLs</h2>
+          <p>
+            Attackers construct deceptive URLs to trick victims into believing
+            they are visiting legitimate websites.
+          </p>
+
+          <p><strong>Misspelled domains (Typosquatting):</strong></p>
+          <div class="example-box">
+            Deceptive: paypaI-security-verify.com (uses capital 'i' or altered
+            spelling)
+          </div>
+          <div class="example-box">Legitimate: paypal.com</div>
+
+          <p><strong>Deceptive Subdomains:</strong></p>
+          <div class="example-box">Deceptive: update-bank-login.net/login</div>
+          <p>
+            Notice that the actual domain name is "update-bank-login.net", not
+            your bank's actual official domain name.
+          </p>
+
+          <p><strong>HTTPS Limitations:</strong></p>
+          <p>
+            A padlock icon or "https://" simply means the connection is
+            encrypted. It does <em>not</em> guarantee that the website owner is
+            trustworthy. Malicious sites routinely obtain valid HTTPS
+            certificates.
+          </p>
+        </div>
+
+        <div class="learn-block">
+          <h2>4. Social Engineering</h2>
+          <p>
+            Social engineering manipulates human emotion to bypass logical
+            decision-making. Common psychological triggers include:
+          </p>
+          <ul class="learn-list">
+            <li>
+              <strong>Authority:</strong> Pretending to be an executive, IT
+              administrator, or law enforcement official.
+            </li>
+            <li>
+              <strong>Fear:</strong> Threatening legal consequences, fine
+              penalties, or account termination.
+            </li>
+            <li>
+              <strong>Urgency:</strong> Imposing artificially tight deadlines to
+              prevent careful review.
+            </li>
+            <li>
+              <strong>Curiosity:</strong> Promising intriguing or exclusive
+              information.
+            </li>
+            <li>
+              <strong>Rewards:</strong> Offering fake lottery wins, gift cards,
+              or bonus payouts.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="view-scenarios" class="view-section">
+        <h1>Practice Scenarios</h1>
+        <p>
+          Read each message carefully and determine whether it is legitimate or
+          suspicious.
+        </p>
+
+        <div id="scenarios-container">
+        </div>
+      </section>
+
+      <section id="view-quiz" class="view-section">
+        <h1>Phishing Knowledge Quiz</h1>
+        <div class="quiz-container">
+          <div id="quiz-active-view">
+            <div id="quiz-progress" class="quiz-progress">Question 1 of 5</div>
+            <h2
+              id="quiz-question-title"
+              style="border: none; padding: 0; margin-top: 0"
+            >
+              Question loading...
+            </h2>
+
+            <div id="quiz-options" class="options-grid">
+            </div>
+
+            <div id="quiz-feedback" class="feedback-box">
+              <div id="quiz-feedback-title" class="feedback-title"></div>
+              <div id="quiz-feedback-text"></div>
+            </div>
+
+            <button
+              id="quiz-next-btn"
+              class="btn quiz-next-btn"
+              onclick="nextQuestion()"
+            >
+              Next Question
+            </button>
+          </div>
+
+          <div id="quiz-result-view" class="results-box" style="display: none">
+            <h2>Quiz Completed</h2>
+            <p>Your Final Score:</p>
+            <div id="quiz-score-display" class="score-display">0 / 5</div>
+            <p id="quiz-summary-message"></p>
+            <button
+              class="btn"
+              onclick="restartQuiz()"
+              style="margin-top: 1rem"
+            >
+              Try Again
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Phishing Detector Academy</p>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
